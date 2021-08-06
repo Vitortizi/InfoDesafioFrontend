@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="middle-temp">
+        <h1>Lista de carros</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Chassi</th>
+                    <th scope="col">Ano</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Renavam</th>
+                    <th scope="col">Editar / Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cars">
+                    <td>{{item.placa}}</td>
+                    <td>{{item.chassi}}</td>
+                    <td>{{item.ano}}</td>
+                    <td>{{item.marca}}</td>
+                    <td>{{item.modelo}}</td>
+                    <td>{{item.renavam}}</td>
+                    <td>
+                        <button class="btn btn-outline-secondary update"(click)="update(item)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-outline-secondary remove" (click)="remove(item.placa)"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+
+                
+            </tbody>
+        </table>
+
+        <div *ngIf="thereIsaCar" class="text-center">
+            <h5>Não existe carro cadastrado!</h5>
+        </div>
+    </div>
+</div>

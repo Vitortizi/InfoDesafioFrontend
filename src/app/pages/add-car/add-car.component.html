@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="middle-temp">
+        <h1>Cadastre um novo carro</h1>
+
+        <div class="row">
+            <div class="col-md-6 mt-3 ">
+                <label for="" class="float-left">Placa</label>
+                <input type="text" class="form-control" [(ngModel)]="placa">
+            </div>
+            <div class="col-md-6 mt-3" >
+                <label for="" class="float-left">Chassi</label>
+                <input type="text" class="form-control" [(ngModel)]="chassi">
+            </div>
+            <div class="col-md-6 mt-3" >
+                <label for="" class="float-left">Renavam</label>
+                <input type="text" class="form-control" [(ngModel)]="renavam">
+            </div>
+            <div class="col-md-6 mt-3" >
+                <label for="" class="float-left">Modelo</label>
+                <input type="text" class="form-control" [(ngModel)]="modelo">
+            </div>
+            <div class="col-md-6 mt-3" >
+                <label for="" class="float-left">Marca</label>
+                <input type="text" class="form-control" [(ngModel)]="marca">
+            </div>
+            <div class="col-md-6 mt-3" >
+                <label for="" class="float-left">Ano</label>
+                <input type="number" class="form-control" [(ngModel)]="ano">
+            </div>
+
+            <div class="col-md-12 mt-5 d-flex-end">
+                <button class="btn btn-outline-dark btn-lg" (click)="addCar()">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+</div>
